@@ -15,7 +15,7 @@ Build Restful CRUD API for a simple Movie-Booking application using Spring Boot,
 **1. Clone the application**
 
 ```bash
-git clone https://github.com/callicoder/spring-boot-mysql-rest-api-tutorial.git
+git clone https://github.com/xkeshav29/moviebooking-springboot.git
 ```
 
 **2. Create Mysql database**
