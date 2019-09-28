@@ -48,7 +48,7 @@ The app will start running at <http://localhost:8080>.
 
 ## Explore Rest APIs
 
-The app defines CRUD APIs and others as listen the respective controllers.
+The app defines CRUD APIs and others as listed the respective controllers.
     /actor
     /movie
     /theater
