@@ -21,9 +21,8 @@ public class PaymentListenerService {
 
     @Transactional
     public void listen(Long bookingId, String paymentStatus) {
-        // Get the bookingId from booking repo
         bookingRepository.findById(bookingId).map(booking -> {
-            booking.setPaymentStatus("SUCCESSS");
+            booking.setPaymentStatus("SUCCESS");
             booking.setBookingStatus("SUCCESS");
             bookingRepository.save(booking);
             return booking;
