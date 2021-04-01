@@ -11,6 +11,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 public @interface SingleExecutionCron {
 
+    //dummy comment
     @AliasFor("cronName") String value() default "";
 
     @AliasFor("value") String cronName() default "";
