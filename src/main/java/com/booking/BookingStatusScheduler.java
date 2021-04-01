@@ -31,7 +31,7 @@ public class BookingStatusScheduler {
         this.bookingRepository = bookingRepository;
         this.reservationRepository = reservationRepository;
     }
-    
+
     @SingleExecutionCron(cronName = "booking_status")
     @Scheduled(cron = "0 0/1 * * * *")
     public void execute() {
