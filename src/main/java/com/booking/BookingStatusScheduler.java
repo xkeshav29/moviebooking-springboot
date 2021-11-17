@@ -32,13 +32,16 @@ public class BookingStatusScheduler {
         this.reservationRepository = reservationRepository;
     }
 
+    /**
+     * find all the booking whose payment status is Pending for last 15 mins
+     * AND Update the booking status to CANCEL
+     */
     @SingleExecutionCron(cronName = "booking_status")
     @Scheduled(cron = "0 0/1 * * * *")
     public void execute() {
         String time = Calendar.getInstance().getTime().toString();
         try {
             LOG.info("Scheduler started at {}", time);
-            // find all the booking whose payment status is Pending for last 15 mins AND Update the booking status to CANCEL
             Calendar calendar = Calendar.getInstance();
             calendar.add(Calendar.MINUTE, 15);
             List<Booking> pendingBookings = bookingRepository.findBookingCreatedAt("PENDING",
@@ -52,6 +55,9 @@ public class BookingStatusScheduler {
         }
     }
 
+    /**
+     * @param booking
+     */
     @Transactional
     private void updateStatus(Booking booking) {
         booking.setBookingStatus("CANCELLED");
