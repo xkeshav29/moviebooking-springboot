@@ -1,4 +1,4 @@
-# Spring Boot, MySQL, JPA, Hibernate Rest API Tutorial
+# Spring Boot, MySQL, JPA, Hibernate Rest API
 
 Build Restful CRUD API for a simple Movie-Booking application using Spring Boot, Mysql, JPA and Hibernate.
 
@@ -49,12 +49,13 @@ The app will start running at <http://localhost:8080>.
 ## Explore Rest APIs
 
 The app defines CRUD APIs and others as listed the respective controllers.
+```    
     /actor
     /movie
     /theater
     /booking
     /show
     /payment
-
+```
 You can test them using postman or any other rest client.
 
